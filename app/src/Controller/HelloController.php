@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Hello controller.
+ */
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -8,7 +13,6 @@ use Symfony\Component\Routing\Attribute\Route;
 /**
  * Class HelloController.
  */
-#[Route('/hello')]
 class HelloController extends AbstractController
 {
     /**
@@ -19,7 +23,7 @@ class HelloController extends AbstractController
      * @return Response HTTP response
      */
     #[Route(
-        '/{name}',
+        '/hello/{name}',
         name: 'hello_index',
         requirements: ['name' => '[a-zA-Z]+'],
         defaults: ['name' => 'World'],
